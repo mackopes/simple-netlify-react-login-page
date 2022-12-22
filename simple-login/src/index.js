@@ -3,36 +3,36 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import LandingPage from './LandingPage';
 import reportWebVitals from './reportWebVitals';
-import {Helmet} from 'react-helmet';
+// import {Helmet} from 'react-helmet';
 import {
   BrowserRouter as Router,
   Route,
-  Navigate,
-  useNavigate,
+  // Navigate,
+  // useNavigate,
   Routes,
-  useLocation,
+  // useLocation,
 } from 'react-router-dom';
 
-const netlifyAuth = {
-  isAuthenticated: false,
-  user: null,
-  authenticate(callback) {
-    this.isAuthenticated = true;
-    window.netlifyIdentity.open();
-    window.netlifyIdentity.on('login', user => {
-      this.user = user;
-      callback(user);
-    });
-  },
-  signout(callback) {
-    this.isAuthenticated = false;
-    window.netlifyIdentity.logout();
-    window.netlifyIdentity.on('logout', () => {
-      this.user = null;
-      callback();
-    });
-  }
-};
+// const netlifyAuth = {
+//   isAuthenticated: false,
+//   user: null,
+//   authenticate(callback) {
+//     this.isAuthenticated = true;
+//     window.netlifyIdentity.open();
+//     window.netlifyIdentity.on('login', user => {
+//       this.user = user;
+//       callback(user);
+//     });
+//   },
+//   signout(callback) {
+//     this.isAuthenticated = false;
+//     window.netlifyIdentity.logout();
+//     window.netlifyIdentity.on('logout', () => {
+//       this.user = null;
+//       callback();
+//     });
+//   }
+// };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
