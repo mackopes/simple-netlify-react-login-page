@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import LandingPage from './LandingPage';
 import reportWebVitals from './reportWebVitals';
-// import {Helmet} from 'react-helmet';
+import {Helmet} from 'react-helmet';
 import {
   BrowserRouter as Router,
   Route,
@@ -37,6 +37,7 @@ import {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>
+  <Helmet script={[{src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'}]}/>
   <Router>
       <Routes>
         <Route path="/" element={<LandingPage/>} />
